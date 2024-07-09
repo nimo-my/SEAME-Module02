@@ -19,6 +19,9 @@ Brake::~Brake()
 Brake &Brake::operator=(const Brake &obj)
 {
     std::cout << "** [Brake] Copy assignment operator! **" << std::endl;
+    this->name = obj.name;
+    this->model = obj.model;
+    this->year = obj.year;
     return (*this);
 };
 

@@ -1,6 +1,6 @@
 #include "Part.hpp"
 
-Part::Part(/* args */)
+Part::Part()
 {
     std::cout << "** [Part] Class Constructor! **" << std::endl;
 };

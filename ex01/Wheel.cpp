@@ -19,6 +19,9 @@ Wheel::~Wheel()
 Wheel &Wheel::operator=(const Wheel &obj)
 {
     std::cout << "** [Wheel] Copy assignment operator! **" << std::endl;
+    this->name = obj.name;
+    this->model = obj.model;
+    this->year = obj.year;
     return (*this);
 };
 

@@ -16,7 +16,7 @@ class Part
     virtual ~Part();
 
     virtual void print() = 0; // Pure virtual function to be overridden by derived classes
-    virtual void sound() = 0;
+    virtual void sound() = 0; // Pure virtual function to be overridden by derived classes
 };
 
 #endif

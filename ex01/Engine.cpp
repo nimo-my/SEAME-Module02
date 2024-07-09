@@ -19,6 +19,9 @@ Engine::~Engine()
 Engine &Engine::operator=(const Engine &obj)
 {
     std::cout << "** [Engine] Copy assignment operator! **" << std::endl;
+    this->name = obj.name;
+    this->model = obj.model;
+    this->year = obj.year;
     return (*this);
 };
 

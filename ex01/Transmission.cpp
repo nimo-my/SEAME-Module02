@@ -19,6 +19,8 @@ Transmission::~Transmission()
 Transmission &Transmission::operator=(const Transmission &obj)
 {
     std::cout << "** [Transmission] Copy assignment operator! **" << std::endl;
+    this->departure = obj.departure;
+    this->arrival = obj.arrival;
     return (*this);
 };
 
