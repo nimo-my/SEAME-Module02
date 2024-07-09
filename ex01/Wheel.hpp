@@ -11,7 +11,7 @@ class Wheel : public Part
     std::size_t year;
 
   public:
-    Wheel(/* args */);
+    Wheel();
     Wheel(const Wheel &obj);
     ~Wheel();
 

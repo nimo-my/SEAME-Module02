@@ -6,9 +6,11 @@
 class Transmission : public Part
 {
   private:
-    /* data */
+    std::string departure;
+    std::string arrival;
+
   public:
-    Transmission(/* args */);
+    Transmission();
     Transmission(const Transmission &obj);
     ~Transmission();
 
@@ -21,6 +23,9 @@ class Transmission : public Part
     {
         std::cout << "(Car going somewhere..)\n";
     }
+    void setArrival(std::string newArrival);
+    void setDeparture(std::string newDeparture);
+    void printInfo();
 };
 
 #endif

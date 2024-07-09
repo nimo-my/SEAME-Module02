@@ -33,20 +33,26 @@ class Car
         std::cout << "\n== (1) [Engine]'s print() function.==\n";
         engine_->print();
 
-        std::cout << "\n== (2) print() function of [Wheels] & [Breakes]. ==\n";
+        std::cout << "\n== (2) Print() function of [Wheels] & [Breakes]. ==\n";
         for (int i = 0; i < 4; ++i)
         {
             wheels_[i].print();
             brakes_[i].print();
         }
 
-        std::cout << "\n== (3) print() function of [Transmission]. ==\n";
+        std::cout << "\n== (3) Print() function of [Transmission]. ==\n";
         transmission_->print();
 
-        std::cout << "\n== (4) print info of [Engine] & [Wheels] & [Brakes]. ==\n";
+        std::cout << "\n== (4) PrintInfo() function of [Engine] & [Wheels] & [Brakes]. ==\n";
         printInfo();
 
-        std::cout << "\n== (5) END OF printParts() function. ==\n";
+        std::cout << "\n== (4) PrintInfo() function of [Transmission]. ==\n";
+        transmission_->printInfo(); // initial(default value)
+        transmission_->setArrival("Korea");
+        transmission_->setDeparture("Germany");
+        transmission_->printInfo(); // changed value
+
+        std::cout << "\n== (6) END OF printParts() function. ==\n";
     }
 
     void printInfo()
