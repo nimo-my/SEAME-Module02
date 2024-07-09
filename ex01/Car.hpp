@@ -28,6 +28,31 @@ class Car
         transmission_ = new Transmission();
     }
 
+    Car(const Car &obj)
+    {
+        *this = obj;
+    }
+
+    ~Car()
+    {
+        delete engine_;
+        delete[] wheels_;
+        delete[] brakes_;
+        delete transmission_;
+    }
+
+    Car &operator=(const Car &obj)
+    {
+        this->engine_ = obj.engine_;
+        for (int i = 0; i < 4; ++i)
+        {
+            this->wheels_[i] = obj.wheels_[i];
+            this->brakes_[i] = obj.brakes_[i];
+        }
+        this->transmission_ = obj.transmission_;
+        return (*this);
+    }
+
     void printParts()
     {
         std::cout << "\n== (1) [Engine]'s print() function.==\n";
@@ -63,14 +88,6 @@ class Car
             wheels_->printInfo();
             brakes_->printInfo();
         }
-    }
-
-    ~Car()
-    {
-        delete engine_;
-        delete[] wheels_;
-        delete[] brakes_;
-        delete transmission_;
     }
 };
 
